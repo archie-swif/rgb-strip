@@ -34,7 +34,6 @@ public class Brightness extends Effect {
 
 	public void lightWithBri(Strip strip, int b) throws IOException, InterruptedException {
 		Color c = ColorTools.getHSBPixel(40, 360, b);
-		System.out.println(b);
 		for (int j = 0; j < strip.getSize(); j++) {
 			strip.setPixel(j, c);
 		}

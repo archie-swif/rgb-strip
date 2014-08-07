@@ -34,7 +34,6 @@ public class Hue extends Effect {
 
 	public void lightWithHue(Strip strip, int h) throws IOException, InterruptedException {
 		Color c = ColorTools.getHSBPixel(h, 360, 360);
-		System.out.println(h + " : " + c);
 		for (int j = 0; j < strip.getSize(); j++) {
 			strip.setPixel(j, c);
 		}

@@ -58,7 +58,6 @@ public class ColorTools {
 				color = Color.BLACK;
 			}
 		}
-		System.out.println(r);
 		return color;
 	}
 
@@ -66,7 +65,6 @@ public class ColorTools {
 
 		int r = random.nextInt(24);
 		Color color = Color.getHSBColor((15 * r) / 360.0f, 1, 1);
-		System.out.println(r * 15);
 		return color;
 	}
 

@@ -34,7 +34,6 @@ public class Sat extends Effect {
 
 	public void lightWithSat(Strip strip, int s) throws IOException, InterruptedException {
 		Color c = ColorTools.getHSBPixel(40, s, 360);
-		System.out.println(s);
 		for (int j = 0; j < strip.getSize(); j++) {
 			strip.setPixel(j, c);
 		}

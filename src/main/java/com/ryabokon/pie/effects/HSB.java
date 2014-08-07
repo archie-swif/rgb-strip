@@ -32,7 +32,7 @@ public class HSB extends Effect {
 			for (int s = 360; s >= 0; s--) {
 				lightWithSat(strip, s, i * 15);
 			}
-			
+
 			i++;
 			for (int s = 0; s <= 360; s++) {
 				lightWithSat(strip, s, i * 15);
@@ -40,14 +40,13 @@ public class HSB extends Effect {
 			for (int b = 360; b >= 0; b--) {
 				lightWithBri(strip, b, i * 15);
 			}
-			
+
 		}
 
 	}
 
 	public void lightWithSat(Strip strip, int sat, int hue) throws IOException, InterruptedException {
 		Color c = ColorTools.getHSBPixel(hue, sat, 360);
-		System.out.println(sat);
 		for (int j = 0; j < strip.getSize(); j++) {
 			strip.setPixel(j, c);
 		}
@@ -57,7 +56,6 @@ public class HSB extends Effect {
 
 	public void lightWithBri(Strip strip, int bri, int hue) throws IOException, InterruptedException {
 		Color c = ColorTools.getHSBPixel(hue, 360, bri);
-		System.out.println(bri);
 		for (int j = 0; j < strip.getSize(); j++) {
 			strip.setPixel(j, c);
 		}
